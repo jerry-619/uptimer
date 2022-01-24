@@ -1,0 +1,26 @@
+{
+   "_comment1":"Credits Visa2Code",
+   "token":"",
+   "ExpressServer":true,
+   "prefix":"!",
+   "port":3000,
+   "status":{
+      "name":"People",
+      "type":"watching"
+   },
+   "server_id":"",
+   "logger":{
+      "enabled":true,
+      "channel_id":"",
+      "bots":false,
+      "humans":false
+   },
+   "staff_system":{
+      "enabled":true,
+      "channel_id":"",
+      "perms":[
+         "MANAGE_GUILD"
+      ]
+   },
+   "_comment2":"Credits Visa2Code"
+}
