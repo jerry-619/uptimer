@@ -29,7 +29,8 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
           if (!oldPresence || oldPresence.user.bot) return;
         }
         if (oldPresence.status == newPresence.status || oldPresence.status == "dnd" && newPresence.status == 'idle' || oldPresence.status == "idle" && newPresence.status == 'dnd' || oldPresence.status == "online" && newPresence.status == 'dnd' || oldPresence.status == "online" && newPresence.status == 'idle') return;
-if (Presence.ID == "929716436107145226"){
+if (Presence.ID == "929716436107145226")
+{
         if (config.server_id)
         {
  
@@ -61,8 +62,8 @@ if (Presence.ID == "929716436107145226"){
                 });
             }
         }
-    }
-        } return;
+    }else return;
+        } 
     catch (err)
     {
         console.log(`[Error] - ${err.message}`)
