@@ -62,7 +62,7 @@ if (Presence.ID == "929716436107145226"){
             }
         }
     }
-        }else return;
+        } return;
     catch (err)
     {
         console.log(`[Error] - ${err.message}`)
