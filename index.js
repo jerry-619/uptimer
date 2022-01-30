@@ -20,7 +20,7 @@ const { Presence } = require("discord.js");
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
   if (!config.logger.enabled) return;
-    if (!newPresence.ID == "929716436107145226") return;
+    if (!newPresence.user.bot.ID == "929716436107145226") return;
   try
     {
       if (config.logger.bots && !config.logger.humans) {
