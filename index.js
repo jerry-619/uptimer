@@ -20,6 +20,7 @@ const { Presence } = require("discord.js");
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
   if (!config.logger.enabled) return;
+    if (!newPresence.ID == "929716436107145226") return;
   try
     {
       if (config.logger.bots && !config.logger.humans) {
@@ -29,8 +30,7 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
           if (!oldPresence || oldPresence.user.bot) return;
         }
         if (oldPresence.status == newPresence.status || oldPresence.status == "dnd" && newPresence.status == 'idle' || oldPresence.status == "idle" && newPresence.status == 'dnd' || oldPresence.status == "online" && newPresence.status == 'dnd' || oldPresence.status == "online" && newPresence.status == 'idle') return;
-if (newPresence.ID == "929716436107145226")
-{
+
         if (config.server_id)
         {
  
@@ -62,7 +62,6 @@ if (newPresence.ID == "929716436107145226")
                 });
             }
         }
-    }else return;
         } 
     catch (err)
     {
