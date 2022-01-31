@@ -95,7 +95,7 @@ if (message.author.bot || !message.guild) return;
   let command = args.shift()
   let prefix = "!"
   if ( command == prefix + "ping")
- return message.channel.send('Pong! (~ ' + client.ping + 'ms)');
+ return message.channel.send('Pong! (~ ' + `${client.ping}` + 'ms)');
 
  const staffembed = new MessageEmbed()
   if (command == prefix + "staff-online") {
