@@ -140,7 +140,7 @@ async function checktoken(token){
     process.exit()
   }
 }
-checktoken(config.token)
+
 
 client.manager = new Manager({
 
@@ -171,7 +171,7 @@ readdirSync("./Events/").forEach(file => {
 });
 
 
-
+checktoken(config.token)
 async function configcheck(config) {
   if (!config.server_id || !config.logger.channel_id || !config.staff_system.channel_id || !config.status.name || !config.status.type || !config.port || !config.prefix) {
     console.log(chalk.redBright("Fill botconfig.js"))
