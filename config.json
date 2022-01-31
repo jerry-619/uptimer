@@ -22,5 +22,42 @@
          "MANAGE_GUILD"
       ]
    },
+   "channel": "927189202033070080",
+
+  "nodes": [
+
+    
+
+  {
+
+      "host": "lavalink-replit.nextman1.repl.co",
+
+      "password": "moozikop",
+
+      "port": 443,
+
+      "retryDelay": 3000,
+
+      "identifier": "Private",
+
+      "secure": true
+
+    },
+
+    {
+
+      "host": "node03.lavalink.eu",
+
+      "password": "Raccoon",
+
+      "port": 2333,
+
+      "retryDelay": 3000,
+
+      "identifier": "MOOZIK OP"
+
+    }
+
+  ]
    "_comment2":"Credits Visa2Code"
 }
