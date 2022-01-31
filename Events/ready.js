@@ -1,8 +1,8 @@
 const { MessageEmbed } = require("discord.js");
-const config = require("../config.json")
+const { config, channel } = require("../config.json")
 module.exports = async (client) => {
 
- const channel = await client.channels.fetch(config.channel)
+ const channel = await client.channels.fetch(channel)
     const embed = new MessageEmbed()
     .setColor("#2F3136")
     .setDescription("Please wait for a minute!\nStatus is being ready!")
