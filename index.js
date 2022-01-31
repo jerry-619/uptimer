@@ -198,7 +198,7 @@ if(!goodconfig) {
    return;
  }*/
 
-client.on('ready', async () => {
+/*client.on('ready', async () => {
     console.log(chalk.greenBright(`Logging in to bot...`))
   
   console.log(chalk.bgRed(chalk.greenBright(`Logged into ${client.user.username}`)))
@@ -217,6 +217,6 @@ app.get('/', function (req, res) {
  console.log(chalk.greenBright(`Web Server Started`))
 app.listen(config.port)
 }
-});
+});*/
 
 client.login(token)
