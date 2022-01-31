@@ -2,7 +2,7 @@ console.clear()
 require('dotenv').config();
 const {nodes, config, token } = require("./config.json");
 const {
-    Client,
+  
     Collection,
     Intents,
     MessageActionRow,
