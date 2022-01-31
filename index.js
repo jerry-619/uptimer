@@ -73,15 +73,15 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
         console.log(`[Error] - ${err.message}`)
     }
 });
-const client = new Client({
 
-    disableMentions: "everyone",
 
-    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+    
 
-    ws: { intents: Intents.ALL }
+    
 
-});
+    
+
+
 
 client.on("messageCreate", async (message) => {
 
