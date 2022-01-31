@@ -12,7 +12,7 @@ const {
 } = require("discord.js");
 const chalk = require("chalk");
 const db = require("quick.db");
-const keepAlive = require('./server');
+
 
 const { readdirSync } = require("fs");
 
@@ -170,7 +170,7 @@ readdirSync("./Events/").forEach(file => {
 
 });
 
-  keepAlive();
+
 
 async function configcheck(config) {
   if (!config.server_id || !config.logger.channel_id || !config.staff_system.channel_id || !config.status.name || !config.status.type || !config.port || !config.prefix) {
