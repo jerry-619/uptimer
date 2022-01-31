@@ -95,9 +95,10 @@ if (message.author.bot || !message.guild) return;
   let command = args.shift()
   let prefix = "!"
   if ( command == prefix + "ping")
-  { const embed = new MessageEmbed(); embed.setTitle('Pong!').setDescription(`Client's Ping: ${client.ws.ping}`).setColor('RED').setTimestamp().setAuthor({ name: 'Bot in 1 line' });  
-   message.reply({content: 'Pong!', embeds: [embed]})}});
-
+  { const embed = new MessageEmbed()
+   embed.setTitle('Pong!').setDescription(`Client's Ping: ${client.ws.ping}`).setColor('RED').setTimestamp().setAuthor({ name: 'Bot in 1 line' });  
+   message.reply({content: 'Pong!', embeds: [embed]});
+};
  const staffembed = new MessageEmbed()
   if (command == prefix + "staff-online") {
 const status = db.get(`status_${message.author.id}`)
@@ -114,7 +115,7 @@ return message.channel.send({ embeds: [staffembed] });
 }
   }
 
-  if (command == prefix + "staff-offline") {
+  /*if (command == prefix + "staff-offline") {
 const status = db.get(`status_${message.author.id}`)
 if (status || status != null || status != undefined) {
   await db.delete(`status_${message.author.id}`)
@@ -128,7 +129,7 @@ return message.guild.channels.cache.get(config.staff_system.channel_id).send({ e
   staffembed.setColor("RED")
   return message.channel.send({ embeds: [staffembed] });
 }
-  }
+  }*/
 });
 
 
