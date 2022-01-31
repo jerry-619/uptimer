@@ -73,6 +73,15 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
         console.log(`[Error] - ${err.message}`)
     }
 });
+const client = new Client({
+
+    disableMentions: "everyone",
+
+    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+
+    ws: { intents: Intents.ALL }
+
+});
 
 client.on("messageCreate", async (message) => {
 
@@ -140,11 +149,7 @@ return message.guild.channels.cache.get(config.staff_system.channel_id).send({ e
     process.exit()
   }
 }*/
-const client = new Client({
-    disableMentions: "everyone",
-    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
-    ws: { intents: Intents.ALL }
-});
+
 
 client.manager = new Manager({
 
