@@ -22,11 +22,11 @@ const moment = require("moment")
 const { PresenceUpdateStatus } = require("discord-api-types/v9");
 const { Presence } = require("discord.js");
 
-const client = new Client({
+/*const client = new Client({
     disableMentions: "everyone",
     partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
     ws: { intents: Intents.ALL }
-});
+});*/
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
   if (!config.logger.enabled) return;
