@@ -1,6 +1,6 @@
 console.clear()
 require('dotenv').config();
-const {nodes, config } = require("./config.json");
+const {nodes, config, token } = require("./config.json");
 const {
     Client,
     Collection,
@@ -114,7 +114,7 @@ return message.guild.channels.cache.get(config.staff_system.channel_id).send({ e
 });
 
 
-async function checktoken(token){
+/*async function checktoken(token){
   if (!token) {
        console.log(chalk.redBright(`NO TOKEN PROVIDED`))
       process.exit()
@@ -139,7 +139,7 @@ async function checktoken(token){
     console.log(chalk.redBright("INVALID TOKEN"))
     process.exit()
   }
-}
+}*/
 
 
 client.manager = new Manager({
@@ -171,7 +171,7 @@ readdirSync("./Events/").forEach(file => {
 });
 
 
-checktoken(config.token)
+/*checktoken(config.token)
 async function configcheck(config) {
   if (!config.server_id || !config.logger.channel_id || !config.staff_system.channel_id || !config.status.name || !config.status.type || !config.port || !config.prefix) {
     console.log(chalk.redBright("Fill botconfig.js"))
@@ -187,7 +187,7 @@ let goodconfig = configcheck(config)
 if(!goodconfig) {
    process.exit()
    return;
- }
+ }*/
 
 client.on('ready', async () => {
     console.log(chalk.greenBright(`Logging in to bot...`))
@@ -210,4 +210,4 @@ app.listen(config.port)
 }
 });
 
-client.login(config.token)
+client.login(token)
