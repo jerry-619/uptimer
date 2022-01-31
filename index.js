@@ -25,7 +25,7 @@ const { Presence } = require("discord.js");
 const client = new Client({
     disableMentions: "everyone",
     partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
-    intents: [Intents.FLAGS.GUILDS]
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 });
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
