@@ -45,7 +45,7 @@ module.exports = async (client) => {
             .setColor("#2F3136")
             
         .setTimestamp(Date.now());
-        msg.edit(rembed);
+        msg.edit({ embeds : [rembed] });
         }, 2000);})
   
     client.manager.init(client.user.id);
