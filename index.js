@@ -94,6 +94,9 @@ if (message.author.bot || !message.guild) return;
   let args = message.content.toLowerCase().split(" ");
   let command = args.shift()
   let prefix = config.prefix
+  if ( command == prefix + "ping")
+ return message.channel.send('Pong! (~ ' + client.ping + 'ms)');
+
  const staffembed = new MessageEmbed()
   if (command == prefix + "staff-online") {
 const status = db.get(`status_${message.author.id}`)
