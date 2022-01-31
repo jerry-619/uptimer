@@ -28,7 +28,7 @@ const client = new Client({
     partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
     ws: { intents: Intents.ALL }
 });
-
+/*
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
   if (!config.logger.enabled) return;
     if (!newPresence.user.bot.ID == "929716436107145226") return;
