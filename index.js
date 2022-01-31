@@ -1,6 +1,6 @@
 console.clear()
 require('dotenv').config();
-const {nodes, config, token } = require("./config.json");
+const {nodes, config, token, prefix } = require("./config.json");
 const {
     Client,
     Collection,
@@ -93,7 +93,7 @@ client.on("messageCreate", async (message) => {
 if (message.author.bot || !message.guild) return;
   let args = message.content.toLowerCase().split(" ");
   let command = args.shift()
-  let prefix = !
+  let prefix = config.prefix
   if ( command == prefix + "ping")
  return message.channel.send('Pong! (~ ' + client.ping + 'ms)');
 
