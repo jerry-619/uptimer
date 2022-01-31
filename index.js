@@ -12,7 +12,7 @@ const {
 } = require("discord.js");
 const chalk = require("chalk");
 const db = require("quick.db");
-
+const keepAlive = require('./server');
 
 const { readdirSync } = require("fs");
 
@@ -218,5 +218,5 @@ app.get('/', function (req, res) {
 app.listen(config.port)
 }
 });*/
-
+keepAlive();
 client.login(token)
