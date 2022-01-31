@@ -7,7 +7,7 @@ module.exports = async (client) => {
     .setColor("#2F3136")
     .setDescription("Please wait for a minute!\nStatus is being ready!")
     channel.bulkDelete(10);
-    channel.send(embed).then((msg) => {
+    channel.send({embeds : [embed] }).then((msg) => {
    setInterval(() =>{
      
             let all = []
