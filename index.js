@@ -93,7 +93,7 @@ client.on("messageCreate", async (message) => {
 if (message.author.bot || !message.guild) return;
   let args = message.content.toLowerCase().split(" ");
   let command = args.shift()
-  let prefix = config.prefix
+  let prefix = "!"
   if ( command == prefix + "ping")
  return message.channel.send('Pong! (~ ' + client.ping + 'ms)');
 
