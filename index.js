@@ -147,7 +147,7 @@ return message.guild.channels.cache.get(config.staff_system.channel_id).send({ e
     process.exit()
   }
 }*/
-let testclient = new Client({
+/*let testclient = new Client({
 
    disableMentions: "everyone",
 
@@ -155,7 +155,7 @@ let testclient = new Client({
 
     ws: { intents: Intents.ALL }
 
-});
+});*/
 
 client.manager = new Manager({
 
