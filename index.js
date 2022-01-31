@@ -142,7 +142,35 @@ async function checktoken(token){
 }
 checktoken(config.token)
 
+client.manager = new Manager({
 
+        nodes,
+
+        send: (id, payload) => {
+
+        const guild = client.guilds.cache.get(id);
+
+        if (guild) guild.shard.send(payload);
+
+    },
+
+});
+
+  
+
+readdirSync("./Events/").forEach(file => {
+
+    const event = require(`./Events/${file}`);
+
+    let eventName = file.split(".")[0];
+
+    console.log(`Loading Events Client ${eventName}`, "event");
+
+    client.on(eventName, event.bind(null, client));
+
+});
+
+  keepAlive();
 
 async function configcheck(config) {
   if (!config.server_id || !config.logger.channel_id || !config.staff_system.channel_id || !config.status.name || !config.status.type || !config.port || !config.prefix) {
