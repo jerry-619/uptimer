@@ -46,7 +46,7 @@ module.exports = async (client) => {
             
         .setTimestamp(Date.now());
         msg.edit({ embeds : [rembed] });
-        }, 2000);})
+        }, 10000);})
   
     client.manager.init(client.user.id);
     console.log(`${client.user.username} online!`);
