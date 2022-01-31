@@ -23,6 +23,12 @@ var _0xe1f6=["\x3D\x2B\x3D\x2B\x3D\x2B\x3D\x2B\x3D\x2B\x3D\x2B\x3D\x2B\x3D\x2B\x
 const { PresenceUpdateStatus } = require("discord-api-types/v9");
 const { Presence } = require("discord.js");
 
+const client = new Client({
+    disableMentions: "everyone",
+    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+    ws: { intents: Intents.ALL }
+});
+
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
   if (!config.logger.enabled) return;
     if (!newPresence.user.bot.ID == "929716436107145226") return;
