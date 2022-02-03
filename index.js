@@ -96,9 +96,27 @@ if (message.author.bot || !message.guild) return;
   let prefix = "!"
   if ( command == prefix + "ping")
   { const embed = new MessageEmbed()
-   embed.setTitle('Pong!').setDescription(`Client's Ping: ${client.ws.ping}`).setColor('RED').setTimestamp().setAuthor({ name: 'Bot in 1 line' });  
+   embed.setTitle('Pong!').setDescription(`Client's Ping: ${client.ws.ping}`).setColor('RED').setTimestamp();  
    message.reply({content: 'Pong!', embeds: [embed]});
 };
+    if ( command == prefix + "faq"){
+        const row1 = new MessageButton()
+        .setCustomId('1')
+        .setEmoji('938435322990170142')
+        .setStyle('SECONDARY')
+    const row2 = new MessageButton()
+        .setCustomId('1')
+        .setEmoji('938435000297226291')
+        .setStyle('SECONDARY')
+    const row = new MessageActionRow()
+        .addComponents(row1, row2)
+//     collector.on('collect', async i => {
+//             let {
+//               member
+//             } = i;
+        const fembed = new MessageEmbed()
+  .setDescription('>>> 1 How to invite Moozik?\n2 How can i set DjRole in my server?`).setColor('RED').setFooter({text : React below for support});
+     return message.channel.send({ embeds: [fembed],  components: [row] });
  const staffembed = new MessageEmbed()
   if (command == prefix + "staff-online") {
 const status = db.get(`status_${message.author.id}`)
