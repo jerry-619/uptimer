@@ -117,6 +117,7 @@ if (message.author.bot || !message.guild) return;
         const fembed = new MessageEmbed()
   .setDescription('>>> 1 How to invite Moozik?\n2 How can i set DjRole in my server?').setColor('RED').setFooter({text : 'React below for support'});
      return message.channel.send({ embeds: [fembed],  components: [row] });
+    };
  const staffembed = new MessageEmbed()
   if (command == prefix + "staff-online") {
 const status = db.get(`status_${message.author.id}`)
