@@ -105,7 +105,7 @@ if (message.author.bot || !message.guild) return;
         .setEmoji('938435322990170142')
         .setStyle('SECONDARY')
     const row2 = new MessageButton()
-        .setCustomId('1')
+        .setCustomId('2')
         .setEmoji('938435000297226291')
         .setStyle('SECONDARY')
     const row = new MessageActionRow()
