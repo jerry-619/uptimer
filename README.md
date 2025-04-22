@@ -29,13 +29,6 @@ His Discord Server for more codes - https://discord.gg/SW9TVwuHrS
 ```
 __**Any video not following this will be taken down!**__
 
-## Credits
-### Any bug or suggestion !
-- Contact With Me Discord: Tejas Lamba#1924
-- or Discord Server [Rainbow Studios](https://discord.gg/SW9TVwuHrS)
-
-### Rainbow Studio
-- [Discord Server](https://discord.gg/SW9TVwuHrS)
 
 
 ### License
